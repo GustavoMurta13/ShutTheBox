@@ -4,5 +4,10 @@
 
 namespace hello
 {
+
+    /**
+     * @brief Example Hello World function
+     *
+     */
     void printHelloWorld();
 }
