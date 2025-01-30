@@ -7,9 +7,14 @@
 // }
 
 #include "hello.hpp"
+#include "Dice.hpp"
+#include "Board.hpp"
 
 int main()
 {
-    hello::printHelloWorld();
+    Board gaming_board(12);
+
+    gaming_board.display();
+
     return 0;
 }
