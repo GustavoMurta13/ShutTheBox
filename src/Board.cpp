@@ -2,7 +2,7 @@
 
 Board::Board(int sizeBoard)
 {
-    for (int i = 0; i < sizeBoard; i++)
+    for (int i = 1; i <= sizeBoard; i++)
     {
         m_numbers[i] = true;
     }
@@ -26,31 +26,27 @@ void Board::display() const
 
     cout << "\033[0m" << endl;
 
-    for (int i = 0; i < sizeBoard; i++)
+    // print top border
+    for (int i = 1; i <= sizeBoard; i++)
     {
         cout << "\t ----- ";
     }
 
     cout << endl;
 
-    for (int i = 0; i < sizeBoard; i++)
+    // print numbers colored
+    for (int i = 1; i <= sizeBoard; i++)
     {
-        if (!m_numbers.at(i))
-        {
-            statusColor = RED;
-        }
-        else
-        {
-            statusColor = GREEN;
-        }
+        statusColor = m_numbers.at(i) ? GREEN : RED;
 
-        cout << "\t | " << statusColor << i + 1 << RESET
+        cout << "\t | " << statusColor << i << RESET
              << " |";
     }
 
     cout << endl;
 
-    for (int i = 0; i < sizeBoard; i++)
+    // print bottom border
+    for (int i = 1; i <= sizeBoard; i++)
     {
         cout << "\t ----- ";
     }
