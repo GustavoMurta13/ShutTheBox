@@ -1,8 +1,8 @@
 #include "Board.hpp"
 
-Board::Board(int sizeBoard)
+Board::Board(int t_sizeBoard)
 {
-    for (int i = 1; i <= sizeBoard; i++)
+    for (int i = 1; i <= t_sizeBoard; i++)
     {
         m_numbers[i] = true;
     }
@@ -20,14 +20,14 @@ Board::~Board()
 
 void Board::display() const
 {
-    int sizeBoard = this->m_numbers.size();
+    size_t sizeBoard = this->m_numbers.size();
 
     string statusColor;
 
-    cout << "\033[0m" << endl;
+    cout << RESET << endl;
 
     // print top border
-    for (int i = 1; i <= sizeBoard; i++)
+    for (size_t i = 1; i <= sizeBoard; i++)
     {
         cout << "\t ----- ";
     }
@@ -35,7 +35,7 @@ void Board::display() const
     cout << endl;
 
     // print numbers colored
-    for (int i = 1; i <= sizeBoard; i++)
+    for (size_t i = 1; i <= sizeBoard; i++)
     {
         statusColor = m_numbers.at(i) ? GREEN : RED;
 
@@ -46,19 +46,48 @@ void Board::display() const
     cout << endl;
 
     // print bottom border
-    for (int i = 1; i <= sizeBoard; i++)
+    for (size_t i = 1; i <= sizeBoard; i++)
     {
         cout << "\t ----- ";
     }
 
-    cout << "\033[0m" << endl
+    cout << RESET << endl
          << endl;
 }
 
-void Board::markUsed(const vector<int> &choices)
+void Board::markUsed(const vector<int> &t_choices)
 {
+    for (const int curChoice : t_choices)
+    {
+        if (curChoice >= 1 && curChoice <= static_cast<int>(m_numbers.size()))
+        {
+            if (this->m_numbers[curChoice])
+            {
+                this->m_numbers[curChoice] = false;
+            }
+            else
+            {
+                cout << "Warning: Number " << curChoice << " is already used!" << endl;
+            }
+        }
+        else
+        {
+            cout << "Warning: Number " << curChoice << " is out of range!" << endl;
+        }
+    }
 }
 
 vector<int> Board::getAvailableNumbers() const
 {
+    vector<int> availableNumbers;
+
+    for (const auto &pair : m_numbers)
+    {
+        if (pair.second)
+        {
+            availableNumbers.push_back(pair.first);
+        }
+    }
+
+    return availableNumbers;
 }

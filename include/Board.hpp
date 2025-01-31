@@ -28,9 +28,9 @@ public:
     /**
      * @brief Construct a new Board object;
      *
-     * @param sizeBoard Size of board;
+     * @param t_sizeBoard Size of board;
      */
-    Board(int sizeBoard = 9);
+    Board(int t_sizeBoard = 9);
 
     /**
      * @brief Destroy the Board object;
@@ -49,7 +49,7 @@ public:
      *
      * @param choices Selected numbers;
      */
-    void markUsed(const vector<int> &choices);
+    void markUsed(const vector<int> &t_choices);
 
     /**
      * @brief Get the available numbers;
