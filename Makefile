@@ -1,33 +1,3 @@
-# # Compiler
-# CXX = g++
-
-# # Directories
-# SRCDIR = src
-# INCDIR = include
-# BINDIR = app
-
-# # Files
-# SOURCES = $(wildcard $(SRCDIR)/*.cpp)
-# OBJECTS = $(SOURCES:$(SRCDIR)/%.cpp=$(BINDIR)/%.o)
-# EXECUTABLE = $(BINDIR)/main.exe
-
-# # Flags
-# CXXFLAGS = -I$(INCDIR) -g
-
-# # Targets
-# all: $(EXECUTABLE)
-
-# $(EXECUTABLE): $(OBJECTS)
-#     $(CXX) $(OBJECTS) -o $@
-
-# $(BINDIR)/%.o: $(SRCDIR)/%.cpp
-#     $(CXX) $(CXXFLAGS) -c $< -o $@
-
-# clean:
-#     rm -f $(BINDIR)/*.o $(EXECUTABLE)
-
-
-
 CXX      := g++
 # CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror
 CXXFLAGS := -pedantic-errors -Wall -Wextra
