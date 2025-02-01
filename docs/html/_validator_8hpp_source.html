@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shut the Box: Class Members</title>
+<title>Shut the Box: include/Validator.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions.html',''); initResizable(true); });
+$(function(){initNavTree('_validator_8hpp_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,25 +102,38 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">Validator.hpp</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
-<li>Board()&#160;:&#160;<a class="el" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a></li>
-<li>Dice()&#160;:&#160;<a class="el" href="class_dice.html#a635b7f95b65ca82c32fd981c5c5ddb83">Dice</a></li>
-<li>display()&#160;:&#160;<a class="el" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">Board</a></li>
-<li>getAvailableNumbers()&#160;:&#160;<a class="el" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">Board</a></li>
-<li>getValidCombinations()&#160;:&#160;<a class="el" href="class_validator.html#a57284181ded05807a407a7ff08f11f96">Validator</a></li>
-<li>markUsed()&#160;:&#160;<a class="el" href="class_board.html#a007919b28220569950246de6e407e28d">Board</a></li>
-<li>rollDice()&#160;:&#160;<a class="el" href="class_dice.html#ab3f51784786597db4b02aab158146df1">Dice</a></li>
-<li>Validator()&#160;:&#160;<a class="el" href="class_validator.html#a5059febd30a909b60107c591fe72eaca">Validator</a></li>
-<li>~Board()&#160;:&#160;<a class="el" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">Board</a></li>
-<li>~Dice()&#160;:&#160;<a class="el" href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">Dice</a></li>
-<li>~Validator()&#160;:&#160;<a class="el" href="class_validator.html#a3e90b7373734dda95137713ece810783">Validator</a></li>
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_validator.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="class_validator.html#a5059febd30a909b60107c591fe72eaca">Validator</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_validator.html#a5059febd30a909b60107c591fe72eaca">   20</a></span>    <a class="code hl_function" href="class_validator.html#a5059febd30a909b60107c591fe72eaca">Validator</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_validator.html#a3e90b7373734dda95137713ece810783">   26</a></span>    <a class="code hl_function" href="class_validator.html#a3e90b7373734dda95137713ece810783">~Validator</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_validator.html#a57284181ded05807a407a7ff08f11f96">   35</a></span>    vector&lt;vector&lt;int&gt;&gt; <a class="code hl_function" href="class_validator.html#a57284181ded05807a407a7ff08f11f96">getValidCombinations</a>(vector&lt;int&gt; &amp;availableNumbers, <span class="keywordtype">int</span> targetSum);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="ttc" id="aclass_validator_html_a3e90b7373734dda95137713ece810783"><div class="ttname"><a href="class_validator.html#a3e90b7373734dda95137713ece810783">Validator::~Validator</a></div><div class="ttdeci">~Validator()</div><div class="ttdoc">Destroy the Validator object;.</div></div>
+<div class="ttc" id="aclass_validator_html_a5059febd30a909b60107c591fe72eaca"><div class="ttname"><a href="class_validator.html#a5059febd30a909b60107c591fe72eaca">Validator::Validator</a></div><div class="ttdeci">Validator()</div><div class="ttdoc">Construct a new Validator object;.</div></div>
+<div class="ttc" id="aclass_validator_html_a57284181ded05807a407a7ff08f11f96"><div class="ttname"><a href="class_validator.html#a57284181ded05807a407a7ff08f11f96">Validator::getValidCombinations</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; getValidCombinations(vector&lt; int &gt; &amp;availableNumbers, int targetSum)</div><div class="ttdoc">Get the Valid Combinations object.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Validator.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -2,6 +2,7 @@ var NAVTREEINDEX0 =
 {
 "_board_8hpp_source.html":[1,0,0,0],
 "_dice_8hpp_source.html":[1,0,0,1],
+"_validator_8hpp_source.html":[1,0,0,3],
 "annotated.html":[0,0],
 "class_board.html":[0,0,0],
 "class_board.html#a007919b28220569950246de6e407e28d":[0,0,0,4],
@@ -13,6 +14,10 @@ var NAVTREEINDEX0 =
 "class_dice.html#a48e90392d2ff1e6736c88f22e8a87751":[0,0,1,1],
 "class_dice.html#a635b7f95b65ca82c32fd981c5c5ddb83":[0,0,1,0],
 "class_dice.html#ab3f51784786597db4b02aab158146df1":[0,0,1,2],
+"class_validator.html":[0,0,2],
+"class_validator.html#a3e90b7373734dda95137713ece810783":[0,0,2,1],
+"class_validator.html#a5059febd30a909b60107c591fe72eaca":[0,0,2,0],
+"class_validator.html#a57284181ded05807a407a7ff08f11f96":[0,0,2,2],
 "classes.html":[0,1],
 "dir_d44c64559bbebec7f509842c48db8b23.html":[1,0,0],
 "files.html":[1,0],

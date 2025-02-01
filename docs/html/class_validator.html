@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shut the Box: include Directory Reference</title>
+<title>Shut the Box: Validator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('dir_d44c64559bbebec7f509842c48db8b23.html',''); initResizable(true); });
+$(function(){initNavTree('class_validator.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,27 +103,75 @@ $(function(){initNavTree('dir_d44c64559bbebec7f509842c48db8b23.html',''); initRe
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">include Directory Reference</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="class_validator-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Validator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class that checks valid number combinations of numbers.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_validator_8hpp_source.html">Validator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="_board_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>Board.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="_dice_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>Dice.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="hello_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>hello.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="_validator_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>Validator.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5059febd30a909b60107c591fe72eaca" id="r_a5059febd30a909b60107c591fe72eaca"><td class="memItemLeft" align="right" valign="top"><a id="a5059febd30a909b60107c591fe72eaca" name="a5059febd30a909b60107c591fe72eaca"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Validator</b> ()</td></tr>
+<tr class="memdesc:a5059febd30a909b60107c591fe72eaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_validator.html" title="Class that checks valid number combinations of numbers.">Validator</a> object;. <br /></td></tr>
+<tr class="separator:a5059febd30a909b60107c591fe72eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e90b7373734dda95137713ece810783" id="r_a3e90b7373734dda95137713ece810783"><td class="memItemLeft" align="right" valign="top"><a id="a3e90b7373734dda95137713ece810783" name="a3e90b7373734dda95137713ece810783"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Validator</b> ()</td></tr>
+<tr class="memdesc:a3e90b7373734dda95137713ece810783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_validator.html" title="Class that checks valid number combinations of numbers.">Validator</a> object;. <br /></td></tr>
+<tr class="separator:a3e90b7373734dda95137713ece810783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57284181ded05807a407a7ff08f11f96" id="r_a57284181ded05807a407a7ff08f11f96"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57284181ded05807a407a7ff08f11f96">getValidCombinations</a> (vector&lt; int &gt; &amp;availableNumbers, int targetSum)</td></tr>
+<tr class="memdesc:a57284181ded05807a407a7ff08f11f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Valid Combinations object.  <br /></td></tr>
+<tr class="separator:a57284181ded05807a407a7ff08f11f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that checks valid number combinations of numbers. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a57284181ded05807a407a7ff08f11f96" name="a57284181ded05807a407a7ff08f11f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57284181ded05807a407a7ff08f11f96">&#9670;&#160;</a></span>getValidCombinations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; Validator::getValidCombinations </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>availableNumbers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetSum</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Valid Combinations object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">availableNumbers</td><td>Numbers available to be combined; </td></tr>
+    <tr><td class="paramname">targetSum</td><td>Target sum for the combinations of numbers; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;vector&lt;int&gt;&gt; All the combinations possible; </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/<a class="el" href="_validator_8hpp_source.html">Validator.hpp</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>
+    <li class="navelem"><a class="el" href="class_validator.html">Validator</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

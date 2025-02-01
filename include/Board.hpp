@@ -54,7 +54,7 @@ public:
     /**
      * @brief Get the available numbers;
      *
-     * @return vector<int> Vector of avaiable numbers;
+     * @return vector<int> Vector of available numbers;
      */
     vector<int> getAvailableNumbers() const;
 
