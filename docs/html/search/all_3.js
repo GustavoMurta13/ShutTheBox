@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['markused_0',['markUsed',['../class_board.html#a007919b28220569950246de6e407e28d',1,'Board']]]
+  ['isgameover_0',['isGameOver',['../class_board.html#a6616ae96f1bdece7a41e9fb2f4ae18c6',1,'Board']]]
 ];

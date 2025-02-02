@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shut the Box: Class Members - Functions</title>
+<title>Shut the Box: Validator Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions_func.html',''); initResizable(true); });
+$(function(){initNavTree('namespace_validator.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,26 +102,62 @@ $(function(){initNavTree('functions_func.html',''); initResizable(true); });
 </div>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Validator Namespace Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented functions with links to the class documentation for each member:</div><ul>
-<li>Board()&#160;:&#160;<a class="el" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a></li>
-<li>Dice()&#160;:&#160;<a class="el" href="class_dice.html#a635b7f95b65ca82c32fd981c5c5ddb83">Dice</a></li>
-<li>display()&#160;:&#160;<a class="el" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">Board</a></li>
-<li>getAvailableNumbers()&#160;:&#160;<a class="el" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">Board</a></li>
-<li>getPlayerChoice()&#160;:&#160;<a class="el" href="class_user_input.html#a9b97b24a7ff23dcd4ed93a14c1fb1343">UserInput</a></li>
-<li>isGameOver()&#160;:&#160;<a class="el" href="class_board.html#a6616ae96f1bdece7a41e9fb2f4ae18c6">Board</a></li>
-<li>markUsed()&#160;:&#160;<a class="el" href="class_board.html#a007919b28220569950246de6e407e28d">Board</a></li>
-<li>rollDice()&#160;:&#160;<a class="el" href="class_dice.html#ab3f51784786597db4b02aab158146df1">Dice</a></li>
-<li>UserInput()&#160;:&#160;<a class="el" href="class_user_input.html#a90bfeac866d6e4be781f81c1a8a8511b">UserInput</a></li>
-<li>~Board()&#160;:&#160;<a class="el" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">Board</a></li>
-<li>~Dice()&#160;:&#160;<a class="el" href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">Dice</a></li>
-<li>~UserInput()&#160;:&#160;<a class="el" href="class_user_input.html#a90a573da38b73a69a1e39139de66faac">UserInput</a></li>
-</ul>
+
+<p>Class that checks valid number combinations of numbers.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a02b7784ca67d236fef4865b5cf481cfa" id="r_a02b7784ca67d236fef4865b5cf481cfa"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b7784ca67d236fef4865b5cf481cfa">getValidCombinations</a> (const vector&lt; int &gt; &amp;availableNumbers, int targetSum)</td></tr>
+<tr class="memdesc:a02b7784ca67d236fef4865b5cf481cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Valid Combinations object.  <br /></td></tr>
+<tr class="separator:a02b7784ca67d236fef4865b5cf481cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that checks valid number combinations of numbers. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a02b7784ca67d236fef4865b5cf481cfa" name="a02b7784ca67d236fef4865b5cf481cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b7784ca67d236fef4865b5cf481cfa">&#9670;&#160;</a></span>getValidCombinations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; Validator::getValidCombinations </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>availableNumbers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetSum</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Valid Combinations object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">availableNumbers</td><td>Numbers available to be combined; </td></tr>
+    <tr><td class="paramname">targetSum</td><td>Target sum for the combinations of numbers; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;vector&lt;int&gt;&gt; All the combinations possible; </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="namespace_validator.html">Validator</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

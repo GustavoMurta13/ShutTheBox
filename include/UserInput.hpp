@@ -9,16 +9,46 @@ using namespace std;
 #define RESET "\033[0m"          // Reset color
 #define NUMBERCOLOR "\033[1;34m" // Number color
 
+/**
+ * @brief Class that manges the input of the user (Combinations);
+ *
+ */
 class UserInput
 {
 private:
+    /**
+     * @brief Display all of the valids choices for combinations;
+     *
+     * @param validCombinations All of the valid combinations;
+     */
     void displayValidChoices(const std::vector<std::vector<int>> &validCombinations);
+
+    /**
+     * @brief Get the User Selection (input);
+     *
+     * @param maxOption Number of the last option possible;
+     * @return int Option chosen;
+     */
     int getUserSelection(int maxOption);
 
 public:
+    /**
+     * @brief Construct a new User Input object;
+     *
+     */
     UserInput();
+
+    /**
+     * @brief Destroy the User Input object;
+     *
+     */
     ~UserInput();
+
+    /**
+     * @brief Get the Player Choice for the combination of tiles;
+     *
+     * @param validCombinations All of the valid combinations;
+     * @return vector<int> Combination chosen;
+     */
     vector<int> getPlayerChoice(const vector<vector<int>> &validCombinations);
-    // void displayValidChoices(const std::vector<std::vector<int>> &validCombinations);
-    // int getUserSelection(int maxOption);
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validator_0',['Validator',['../class_validator.html',1,'Validator'],['../class_validator.html#a5059febd30a909b60107c591fe72eaca',1,'Validator::Validator()']]]
+  ['rolldice_0',['rollDice',['../class_dice.html#ab3f51784786597db4b02aab158146df1',1,'Dice']]]
 ];

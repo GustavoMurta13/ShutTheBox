@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "bdgmrv~",
-  1: "bdv",
-  2: "bdgmrv~"
+  0: "bdgimruv~",
+  1: "bdu",
+  2: "v",
+  3: "bdgimru~"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "namespaces",
+  3: "functions"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Functions"
+  2: "Namespaces",
+  3: "Functions"
 };
 

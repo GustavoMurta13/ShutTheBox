@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rolldice_0',['rollDice',['../class_dice.html#ab3f51784786597db4b02aab158146df1',1,'Dice']]]
+  ['markused_0',['markUsed',['../class_board.html#a007919b28220569950246de6e407e28d',1,'Board']]]
 ];

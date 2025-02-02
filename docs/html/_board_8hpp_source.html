@@ -113,34 +113,37 @@ $(function(){initNavTree('_board_8hpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Validator.hpp&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define RESET &quot;\033[0m&quot;  </span><span class="comment">// Reset color</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define RED &quot;\033[31m&quot;   </span><span class="comment">// Red color</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define GREEN &quot;\033[32m&quot; </span><span class="comment">// Green color</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_board.html">   18</a></span><span class="keyword">class </span><a class="code hl_function" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    unordered_map&lt;int, bool&gt; m_numbers;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_board.html#aba3543628c38c55eb527d030763666d1">   33</a></span>    <a class="code hl_function" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a>(<span class="keywordtype">int</span> t_sizeBoard = 9);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">   39</a></span>    <a class="code hl_function" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">~Board</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">display</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_board.html#a007919b28220569950246de6e407e28d">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_board.html#a007919b28220569950246de6e407e28d">markUsed</a>(<span class="keyword">const</span> vector&lt;int&gt; &amp;t_choices);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">   59</a></span>    vector&lt;int&gt; <a class="code hl_function" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">getAvailableNumbers</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// bool isGameOver(int rolledValue, const Validator &amp;validator) const; // Check game over condition</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define RESET &quot;\033[0m&quot;    </span><span class="comment">// Reset color</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define RED &quot;\033[1;31m&quot;   </span><span class="comment">// Red color</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define GREEN &quot;\033[1;32m&quot; </span><span class="comment">// Green color</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_board.html">   20</a></span><span class="keyword">class </span><a class="code hl_function" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    unordered_map&lt;int, bool&gt; m_numbers;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_board.html#aba3543628c38c55eb527d030763666d1">   35</a></span>    <a class="code hl_function" href="class_board.html#aba3543628c38c55eb527d030763666d1">Board</a>(<span class="keywordtype">int</span> t_sizeBoard = 9);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">   41</a></span>    <a class="code hl_function" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">~Board</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">display</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_board.html#a007919b28220569950246de6e407e28d">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_board.html#a007919b28220569950246de6e407e28d">markUsed</a>(<span class="keyword">const</span> vector&lt;int&gt; &amp;t_choices);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">   61</a></span>    vector&lt;int&gt; <a class="code hl_function" href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">getAvailableNumbers</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_board.html#a6616ae96f1bdece7a41e9fb2f4ae18c6">   70</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_board.html#a6616ae96f1bdece7a41e9fb2f4ae18c6">isGameOver</a>(<span class="keywordtype">int</span> rolledValue) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
 </div>
 <div class="ttc" id="aclass_board_html_a007919b28220569950246de6e407e28d"><div class="ttname"><a href="class_board.html#a007919b28220569950246de6e407e28d">Board::markUsed</a></div><div class="ttdeci">void markUsed(const vector&lt; int &gt; &amp;t_choices)</div><div class="ttdoc">Mark selected numbers as used;.</div></div>
 <div class="ttc" id="aclass_board_html_a21ee226fb2f36a5b8b7ee480bdd34ff1"><div class="ttname"><a href="class_board.html#a21ee226fb2f36a5b8b7ee480bdd34ff1">Board::display</a></div><div class="ttdeci">void display() const</div><div class="ttdoc">Display the gaming board;.</div></div>
+<div class="ttc" id="aclass_board_html_a6616ae96f1bdece7a41e9fb2f4ae18c6"><div class="ttname"><a href="class_board.html#a6616ae96f1bdece7a41e9fb2f4ae18c6">Board::isGameOver</a></div><div class="ttdeci">bool isGameOver(int rolledValue) const</div><div class="ttdoc">Check if it is Game Over through the validator.</div></div>
 <div class="ttc" id="aclass_board_html_aae4d8ba8269bace8f4909b7a5fe11902"><div class="ttname"><a href="class_board.html#aae4d8ba8269bace8f4909b7a5fe11902">Board::getAvailableNumbers</a></div><div class="ttdeci">vector&lt; int &gt; getAvailableNumbers() const</div><div class="ttdoc">Get the available numbers;.</div></div>
 <div class="ttc" id="aclass_board_html_aba3543628c38c55eb527d030763666d1"><div class="ttname"><a href="class_board.html#aba3543628c38c55eb527d030763666d1">Board::Board</a></div><div class="ttdeci">Board(int t_sizeBoard=9)</div><div class="ttdoc">Construct a new Board object;.</div></div>
 <div class="ttc" id="aclass_board_html_af73f45730119a1fd8f6670f53f959e68"><div class="ttname"><a href="class_board.html#af73f45730119a1fd8f6670f53f959e68">Board::~Board</a></div><div class="ttdeci">~Board()</div><div class="ttdoc">Destroy the Board object;.</div></div>
