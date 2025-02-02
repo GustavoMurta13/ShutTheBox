@@ -5,6 +5,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include "Validator.hpp"
+
 using namespace std;
 
 #define RESET "\033[0m"  // Reset color
@@ -58,5 +60,12 @@ public:
      */
     vector<int> getAvailableNumbers() const;
 
-    // bool isGameOver(int rolledValue, const Validator &validator) const; // Check game over condition
+    /**
+     * @brief Check if it is Game Over through the validator
+     *
+     * @param rolledValue Value rolled in the dice
+     * @return true It is GAME OVER
+     * @return false It is NOT GAME OVER
+     */
+    bool isGameOver(int rolledValue) const;
 };

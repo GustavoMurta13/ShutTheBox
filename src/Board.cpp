@@ -91,3 +91,12 @@ vector<int> Board::getAvailableNumbers() const
 
     return availableNumbers;
 }
+
+bool Board::isGameOver(int rolledValue) const
+{
+    vector<int> availableNums = getAvailableNumbers();
+
+    vector<vector<int>> validMoves = Validator::getValidCombinations(availableNums, rolledValue);
+
+    return validMoves.empty();
+}

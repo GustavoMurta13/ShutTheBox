@@ -1,1 +1,2 @@
-build/objects/src/Board.o: src/Board.cpp include/Board.hpp
+build/objects/src/Board.o: src/Board.cpp include/Board.hpp \
+ include/Validator.hpp
