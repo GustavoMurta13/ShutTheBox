@@ -4,6 +4,7 @@
 #include "Dice.hpp"
 #include "Board.hpp"
 #include "Validator.hpp"
+#include "UserInput.hpp"
 
 int main()
 {
@@ -22,39 +23,30 @@ int main()
 
     // cout << gaming_board.isGameOver(1) << endl;
 
-    Board board(5); // Creates a board with numbers {1, 2, 3, 4, 5}
+    UserInput userInput;
 
-    std::cout << "Initial Board:" << std::endl;
-    board.display();
+    std::vector<std::vector<int>> testCombinations = {
+        {5},
+        {1, 4},
+        {2, 3},
+        {1, 2, 2} // Invalid test case to see if it handles duplicates
+    };
 
-    // Test Case 1: Roll a 5 (Game should continue)
-    int roll = 5;
-    bool gameOver = board.isGameOver(roll);
-    std::cout << "Rolled: " << roll << " | isGameOver: " << (gameOver ? "TRUE" : "FALSE") << std::endl;
+    std::cout << "Testing displayValidChoices() with sample combinations:" << std::endl;
+    // userInput.displayValidChoices(testCombinations);
+    // userInput.getUserSelection(testCombinations.size());
+    vector<int> choice = userInput.getPlayerChoice(testCombinations);
 
-    // Mark numbers {1, 4} as used (Game should still continue because {2, 3} exists)
-    board.markUsed({1, 4});
-    std::cout << "Updated Board (After removing 1,4):" << std::endl;
-    board.display();
-
-    gameOver = board.isGameOver(roll);
-    std::cout << "Rolled: " << roll << " | isGameOver: " << (gameOver ? "TRUE" : "FALSE") << std::endl;
-
-    // Mark {2, 3} as used
-    board.markUsed({2, 3});
-    std::cout << "Updated Board (After removing 2,3):" << std::endl;
-    board.display();
-
-    gameOver = board.isGameOver(roll);
-    std::cout << "Rolled: " << roll << " | isGameOver: " << (gameOver ? "TRUE" : "FALSE") << std::endl;
-
-    // Mark {5} as used (Now game should end)
-    board.markUsed({5});
-    std::cout << "Updated Board (After removing 5):" << std::endl;
-    board.display();
-
-    gameOver = board.isGameOver(roll);
-    std::cout << "Rolled: " << roll << " | isGameOver: " << (gameOver ? "TRUE" : "FALSE") << std::endl;
+    std::cout << "Option: [";
+    for (size_t i = 0; i < choice.size(); ++i)
+    {
+        std::cout << choice[i];
+        if (i < choice.size() - 1)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]" << std::endl;
 
     return 0;
 }

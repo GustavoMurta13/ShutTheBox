@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#define RESET "\033[0m"  // Reset color
-#define RED "\033[31m"   // Red color
-#define GREEN "\033[32m" // Green color
+#define RESET "\033[0m"    // Reset color
+#define RED "\033[1;31m"   // Red color
+#define GREEN "\033[1;32m" // Green color
 
 /**
  * @brief Class that manages the game board state;
