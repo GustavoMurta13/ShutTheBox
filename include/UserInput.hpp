@@ -19,17 +19,17 @@ private:
     /**
      * @brief Display all of the valids choices for combinations;
      *
-     * @param validCombinations All of the valid combinations;
+     * @param t_validCombinations All of the valid combinations;
      */
-    void displayValidChoices(const std::vector<std::vector<int>> &validCombinations);
+    void displayValidChoices(const std::vector<std::vector<int>> &t_validCombinations);
 
     /**
      * @brief Get the User Selection (input);
      *
-     * @param maxOption Number of the last option possible;
+     * @param t_maxOption Number of the last option possible;
      * @return int Option chosen;
      */
-    int getUserSelection(int maxOption);
+    int getUserSelection(int t_maxOption);
 
 public:
     /**
@@ -47,8 +47,8 @@ public:
     /**
      * @brief Get the Player Choice for the combination of tiles;
      *
-     * @param validCombinations All of the valid combinations;
+     * @param t_validCombinations All of the valid combinations;
      * @return vector<int> Combination chosen;
      */
-    vector<int> getPlayerChoice(const vector<vector<int>> &validCombinations);
+    vector<int> getPlayerChoice(const vector<vector<int>> &t_validCombinations);
 };

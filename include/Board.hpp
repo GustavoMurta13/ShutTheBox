@@ -49,7 +49,7 @@ public:
     /**
      * @brief Mark selected numbers as used;
      *
-     * @param choices Selected numbers;
+     * @param t_choices Selected numbers;
      */
     void markUsed(const vector<int> &t_choices);
 
@@ -63,9 +63,9 @@ public:
     /**
      * @brief Check if it is Game Over through the validator
      *
-     * @param rolledValue Value rolled in the dice
+     * @param t_rolledValue Value rolled in the dice
      * @return true It is GAME OVER
      * @return false It is NOT GAME OVER
      */
-    bool isGameOver(int rolledValue) const;
+    bool isGameOver(int t_rolledValue) const;
 };

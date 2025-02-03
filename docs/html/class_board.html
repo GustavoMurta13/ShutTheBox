@@ -134,9 +134,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> () const<
 <tr class="memitem:aae4d8ba8269bace8f4909b7a5fe11902" id="r_aae4d8ba8269bace8f4909b7a5fe11902"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae4d8ba8269bace8f4909b7a5fe11902">getAvailableNumbers</a> () const</td></tr>
 <tr class="memdesc:aae4d8ba8269bace8f4909b7a5fe11902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the available numbers;.  <br /></td></tr>
 <tr class="separator:aae4d8ba8269bace8f4909b7a5fe11902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6616ae96f1bdece7a41e9fb2f4ae18c6" id="r_a6616ae96f1bdece7a41e9fb2f4ae18c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6616ae96f1bdece7a41e9fb2f4ae18c6">isGameOver</a> (int rolledValue) const</td></tr>
-<tr class="memdesc:a6616ae96f1bdece7a41e9fb2f4ae18c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if it is Game Over through the validator.  <br /></td></tr>
-<tr class="separator:a6616ae96f1bdece7a41e9fb2f4ae18c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a07d4ffca9e272266e26ddce7f1399f" id="r_a2a07d4ffca9e272266e26ddce7f1399f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a07d4ffca9e272266e26ddce7f1399f">isGameOver</a> (int t_rolledValue) const</td></tr>
+<tr class="memdesc:a2a07d4ffca9e272266e26ddce7f1399f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if it is Game Over through the validator.  <br /></td></tr>
+<tr class="separator:a2a07d4ffca9e272266e26ddce7f1399f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that manages the game board state;. </p>
@@ -187,8 +187,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> () const<
 
 </div>
 </div>
-<a id="a6616ae96f1bdece7a41e9fb2f4ae18c6" name="a6616ae96f1bdece7a41e9fb2f4ae18c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6616ae96f1bdece7a41e9fb2f4ae18c6">&#9670;&#160;</a></span>isGameOver()</h2>
+<a id="a2a07d4ffca9e272266e26ddce7f1399f" name="a2a07d4ffca9e272266e26ddce7f1399f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a07d4ffca9e272266e26ddce7f1399f">&#9670;&#160;</a></span>isGameOver()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> () const<
         <tr>
           <td class="memname">bool Board::isGameOver </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rolledValue</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t_rolledValue</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -205,7 +205,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> () const<
 <p>Check if it is Game Over through the validator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rolledValue</td><td>Value rolled in the dice </td></tr>
+    <tr><td class="paramname">t_rolledValue</td><td>Value rolled in the dice </td></tr>
   </table>
   </dd>
 </dl>
@@ -233,7 +233,7 @@ false It is NOT GAME OVER </dd></dl>
 <p>Mark selected numbers as used;. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">choices</td><td>Selected numbers; </td></tr>
+    <tr><td class="paramname">t_choices</td><td>Selected numbers; </td></tr>
   </table>
   </dd>
 </dl>

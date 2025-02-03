@@ -4,17 +4,17 @@ Board::Board(int t_sizeBoard)
 {
     for (int i = 1; i <= t_sizeBoard; i++)
     {
-        m_numbers[i] = true;
+        this->m_numbers[i] = true;
     }
 
-    cout << "Size of Board " << m_numbers.size() << endl;
+    cout << "Size of Board " << this->m_numbers.size() << endl;
 
     puts("Creates BOARD!");
 }
 
 Board::~Board()
 {
-    m_numbers.clear();
+    this->m_numbers.clear();
     puts("Deletes BOARD!");
 }
 
@@ -37,7 +37,7 @@ void Board::display() const
     // print numbers colored
     for (size_t i = 1; i <= sizeBoard; i++)
     {
-        statusColor = m_numbers.at(i) ? GREEN : RED;
+        statusColor = this->m_numbers.at(i) ? GREEN : RED;
 
         cout << "\t | " << statusColor << i << RESET
              << " |";
@@ -59,7 +59,7 @@ void Board::markUsed(const vector<int> &t_choices)
 {
     for (const int curChoice : t_choices)
     {
-        if (curChoice >= 1 && curChoice <= static_cast<int>(m_numbers.size()))
+        if (curChoice >= 1 && curChoice <= static_cast<int>(this->m_numbers.size()))
         {
             if (this->m_numbers[curChoice])
             {
@@ -81,7 +81,7 @@ vector<int> Board::getAvailableNumbers() const
 {
     vector<int> availableNumbers;
 
-    for (const auto &pair : m_numbers)
+    for (const auto &pair : this->m_numbers)
     {
         if (pair.second)
         {
@@ -92,11 +92,11 @@ vector<int> Board::getAvailableNumbers() const
     return availableNumbers;
 }
 
-bool Board::isGameOver(int rolledValue) const
+bool Board::isGameOver(int t_rolledValue) const
 {
     vector<int> availableNums = getAvailableNumbers();
 
-    vector<vector<int>> validMoves = Validator::getValidCombinations(availableNums, rolledValue);
+    vector<vector<int>> validMoves = Validator::getValidCombinations(availableNums, t_rolledValue);
 
     return validMoves.empty();
 }
