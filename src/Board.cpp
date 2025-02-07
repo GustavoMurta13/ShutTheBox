@@ -92,11 +92,11 @@ vector<int> Board::getAvailableNumbers() const
     return availableNumbers;
 }
 
-bool Board::isGameOver(int rolledValue) const
+bool Board::isGameOver(int t_rolledValue) const
 {
     vector<int> availableNums = getAvailableNumbers();
 
-    vector<vector<int>> validMoves = Validator::getValidCombinations(availableNums, rolledValue);
+    vector<vector<int>> validMoves = Validator::getValidCombinations(availableNums, t_rolledValue);
 
     return validMoves.empty();
 }
