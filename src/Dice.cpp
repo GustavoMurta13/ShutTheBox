@@ -20,7 +20,7 @@ int Dice::rollDice()
 {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, this->m_maxValueAllowed);
+    uniform_int_distribution<> dis(1, m_maxValueAllowed);
 
     return dis(gen);
 }
