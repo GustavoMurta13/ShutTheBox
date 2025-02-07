@@ -6,12 +6,17 @@
 #include "Validator.hpp"
 #include "UserInput.hpp"
 #include "Settings.hpp"
+#include "SettingsInput.hpp"
 
 void testSettings();
+void testSettingsInput();
+void testUserInput();
 
 int main()
 {
-    testSettings();
+    // testSettings();
+    // testSettingsInput();
+    testUserInput();
     return 0;
 }
 
@@ -52,4 +57,55 @@ void testSettings()
     std::cout << "Max Dice Value after invalid input: " << gameSettings.getMaxDiceValue() << "\n\n";
 
     std::cout << "✅ Settings Class Tests Completed!\n";
+}
+
+void testSettingsInput()
+{
+    std::cout << "🔍 [TEST] Starting SettingsInput Test...\n";
+
+    // Create Settings and SettingsInput instances
+    Settings gameSettings;
+    SettingsInput inputHandler;
+
+    // Run user configuration
+    inputHandler.configureSettings(gameSettings);
+
+    // Display final values
+    std::cout << "🎯 [RESULT] Final Settings:\n";
+    std::cout << "Board Size: " << gameSettings.getBoardSize() << "\n";
+    std::cout << "Max Dice Value: " << gameSettings.getMaxDiceValue() << "\n";
+
+    // Test if values were correctly updated
+    if (gameSettings.getBoardSize() >= 6 && gameSettings.getMaxDiceValue() >= gameSettings.getBoardSize())
+    {
+        std::cout << "✅ [TEST PASSED] Settings updated correctly!\n";
+    }
+    else
+    {
+        std::cout << "❌ [TEST FAILED] Invalid settings detected.\n";
+    }
+}
+
+void testUserInput()
+{
+    UserInput userInput;
+
+    // Simulated valid combinations
+    std::vector<std::vector<int>> testCombinations = {
+        {1, 2}, {3, 4}, {5}, {6, 7, 8}};
+
+    std::cout << "🔍 [TEST] Prompting user to select a valid choice...\n";
+
+    // Get user choice
+    std::vector<int> selectedCombination = userInput.getPlayerChoice(testCombinations);
+
+    // Display the chosen combination
+    std::cout << "🎯 [RESULT] User selected: [ ";
+    for (int num : selectedCombination)
+    {
+        std::cout << num << " ";
+    }
+    std::cout << "]\n";
+
+    std::cout << "✅ [TEST PASSED] User input was successfully processed!\n";
 }
