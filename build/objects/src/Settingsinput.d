@@ -1,2 +1,2 @@
-build/objects/src/SettingsInput.o: src/SettingsInput.cpp \
+build/objects/src/Settingsinput.o: src/Settingsinput.cpp \
  include/SettingsInput.hpp include/Settings.hpp
