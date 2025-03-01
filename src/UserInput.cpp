@@ -10,9 +10,9 @@ UserInput::~UserInput()
     puts("Deletes USER INPUT!");
 }
 
-void UserInput::displayValidChoices(const std::vector<std::vector<int>> &validCombinations)
+void UserInput::displayValidChoices(const std::vector<std::vector<int>> &t_validCombinations)
 {
-    if (validCombinations.empty())
+    if (t_validCombinations.empty())
     {
         std::cout << "❌ No valid choices available." << std::endl;
         return;
@@ -21,7 +21,7 @@ void UserInput::displayValidChoices(const std::vector<std::vector<int>> &validCo
     int i = 1;
     std::cout << NUMBERCOLOR << "🔢 Valid Choices: " << RESET << "\n";
 
-    for (const auto &comb : validCombinations)
+    for (const auto &comb : t_validCombinations)
     {
         std::cout << NUMBERCOLOR << i << "." << RESET << " [";
 
@@ -40,13 +40,13 @@ void UserInput::displayValidChoices(const std::vector<std::vector<int>> &validCo
     }
 }
 
-int UserInput::getUserSelection(int maxOption)
+int UserInput::getUserSelection(int t_maxOption)
 {
     int selection = 0;
 
     while (true)
     {
-        std::cout << "Choose an option (" << NUMBERCOLOR << "1" << RESET << " - " << NUMBERCOLOR << maxOption << RESET << "): ";
+        std::cout << "Choose an option (" << NUMBERCOLOR << "1" << RESET << " - " << NUMBERCOLOR << t_maxOption << RESET << "): ";
         std::cin >> selection;
 
         // Check if the input is a valid integer
@@ -54,11 +54,11 @@ int UserInput::getUserSelection(int maxOption)
         {
             std::cin.clear();                                                   // Clear the error flag
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore invalid input
-            std::cout << "❌ Invalid input. Please enter a number between 1 and " << maxOption << ". \n";
+            std::cout << "❌ Invalid input. Please enter a number between 1 and " << t_maxOption << ". \n";
         }
-        else if (selection < 1 || selection > maxOption)
+        else if (selection < 1 || selection > t_maxOption)
         {
-            std::cout << "⚠️ Invalid choice. Please enter a number between 1 and " << maxOption << ". \n";
+            std::cout << "⚠️ Invalid choice. Please enter a number between 1 and " << t_maxOption << ". \n";
         }
         else
         {
@@ -70,10 +70,10 @@ int UserInput::getUserSelection(int maxOption)
     return selection;
 }
 
-vector<int> UserInput::getPlayerChoice(const vector<vector<int>> &validCombinations)
+vector<int> UserInput::getPlayerChoice(const vector<vector<int>> &t_validCombinations)
 {
-    displayValidChoices(validCombinations);
-    int userChoice = getUserSelection(validCombinations.size());
+    displayValidChoices(t_validCombinations);
+    int userChoice = getUserSelection(t_validCombinations.size());
 
-    return validCombinations[userChoice - 1];
+    return t_validCombinations[userChoice - 1];
 }

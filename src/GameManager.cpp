@@ -2,7 +2,6 @@
 
 GameManager::GameManager()
 {
-
     puts("Creates GAME MANAGER!");
 }
 
@@ -13,8 +12,10 @@ GameManager::~GameManager()
 
 void GameManager::startGame()
 {
-    Board gamingBoard;
-    Dice gamingDice(12);
+}
+
+void GameManager::processTurn()
+{
 }
 
 void GameManager::showLeaderboard()
@@ -25,4 +26,9 @@ void GameManager::showLeaderboard()
 void GameManager::mainMenu()
 {
     puts("Main menu!");
+}
+
+void clearScreen()
+{
+    
 }

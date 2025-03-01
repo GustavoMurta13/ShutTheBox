@@ -22,7 +22,7 @@ public:
     /**
      * @brief Construct a new Dice object;
      *
-     * @param maxValue Value that limits the number rolled;
+     * @param t_maxValue Value that limits the number rolled;
      */
     Dice(int t_maxValue);
 

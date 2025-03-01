@@ -15,8 +15,8 @@ void testUserInput();
 int main()
 {
     // testSettings();
-    // testSettingsInput();
-    testUserInput();
+    testSettingsInput();
+    // testUserInput();
     return 0;
 }
 
